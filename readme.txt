@@ -1,4 +1,4 @@
-﻿=== WP-Player For WordPress ===
+﻿=== WP-Player ===
 Contributors: M.J
 Donate link: https://me.alipay.com/jiangyahai
 Tags: 虾米音乐,MP3,WP-Player,Mp3-Player,Player
@@ -28,11 +28,11 @@ PS：一篇文章只能插入一个播放器，因为用了MetaBox获取参数�
 详细介绍： http://webjyh.com/wp-player/
 
 == Installation ==
-
 1. 上传 `wp-player`目录 到 `/wp-content/plugins/` 目录
 2. 在后台插件菜单激活该插件
 3. 后台设置虾米音乐解析的API地址，皮肤，和是否加载jQuery
 4. 短代码调用插件：
+
 	[player]
 	[player loop="1" autoplay="1"]
 
