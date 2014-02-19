@@ -44,6 +44,9 @@ PS：一篇文章只能插入一个播放器，因为用了MetaBox获取参数�
 
 == Changelog ==
 
+= v1.3.2 =
+1.修正 后台 jQuery 选项选择无用的Bug。
+
 = v1.3.1 =
 1.因提交到官方所以删除一些无用文件
 2.由原来自带的jQuery库 修改调用WordPress自带jQuery库
