@@ -8,11 +8,11 @@ Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-WP-Player 一个迷你歌曲播放器，支持多歌曲播放，支持使用虾米歌曲网址或网易云音乐网址，也支持自定义上传音乐。
+WP-Player 一个迷你歌曲播放器，支持多歌曲播放，支持使用虾米歌曲地址，也支持自定义上传音乐。
 
 == Description ==
 
-WordPress 插件 WP-Player 是一个迷你歌曲播放器，支持多歌曲播放，支持使用虾米歌曲网址或网易云音乐网址，也支持自定义上传音乐。
+WordPress 插件 WP-Player 是一个迷你歌曲播放器，支持多歌曲播放，支持使用虾米歌曲地址，也支持自定义上传音乐。
 
 插件介绍：
 1. 在虾米网打开喜欢的歌曲页面，复制歌曲页面的网址如：http://www.xiami.com/song/2078022...... 
