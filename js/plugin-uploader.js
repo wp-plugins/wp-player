@@ -1,12 +1,12 @@
 /**
- * @name     Wp-Player Admin JS
- * @desc     MetaBox JavaScript
- * @depend   jQuery
- * @author   M.J
- * @date     2014-12-19
- * @update   2014-12-27
- * @URL      http://webjyh.com
- * @version  2.1.0
- * 
- */
-jQuery(document).ready(function(){var a=window.send_to_editor;jQuery(".WP-Player-File").on("click",function(){formField=jQuery(this).prev().attr("id");tb_show("","media-upload.php?media-upload.php?type=image&amp;TB_iframe=true");window.send_to_editor=function(b){fileUrl=jQuery(b).attr("href");jQuery("#"+formField).val(fileUrl);tb_remove();window.send_to_editor=a};return false});jQuery("#wp-player-tabs > li").on("click",function(){var b=jQuery(this).index();jQuery(this).addClass("current").siblings().removeClass("current");jQuery("#wp-player-row > div").hide().eq(b).fadeIn()});jQuery("#wp_player_get_xiami_id").on("click",function(){var d=jQuery("#mp3_xiami"),e=jQuery("#mp3_xiami_type"),c=d.val(),f=/^http[s]?:\/\/\w*[\.]?xiami.com+\/(\w+)\/+(\d+).*$/,g={};if(typeof c==="undefined"||c==""){d.focus()}var b=c.match(f);if(jQuery.isArray(b)){g.type=b[1];g.id=b[2]}else{if(!jQuery.isNumeric(c)){alert("获取虾米音乐ID失败！")}}if(jQuery.isArray(b)&&g.type&&g.id){d.val(g.id);e.children("option").prop("selected",false);jQuery("#mp3_xiami_type").find("option[value="+g.type+"]").prop("selected",true)}})});
+* @name     Wp-Player Admin JS
+* @desc     MetaBox JavaScript
+* @depend   jQuery
+* @author   M.J
+* @date     2014-12-19
+* @update   2015-01-01
+* @URL      http://webjyh.com
+* @version  2.2.0
+* 
+*/
+jQuery(document).ready(function(){var a=window.send_to_editor;jQuery(".WP-Player-File").on("click",function(){formField=jQuery(this).prev().attr("id");tb_show("","media-upload.php?media-upload.php?type=image&amp;TB_iframe=true");window.send_to_editor=function(b){fileUrl=jQuery(b).attr("href");jQuery("#"+formField).val(fileUrl);tb_remove();window.send_to_editor=a};return false});jQuery("#wp-player-tabs > li").on("click",function(){var b=jQuery(this).index();jQuery(this).addClass("current").siblings().removeClass("current");jQuery("#wp-player-row > div").hide().eq(b).fadeIn()});jQuery("#wp_player_get_xiami_id").on("click",function(){var i=jQuery("#wp_player_music_type"),d=i.find("option").length,b=jQuery("#mp3_xiami"),f=jQuery("#mp3_xiami_type"),j=b.val(),g=[/^http[s]?:\/\/\w*[\.]?xiami.com+\/(\w+)\/+(\d+).*$/,/^http:\/\/music.163.com\/#.*\/{1}(.+)\?id=(\d+)$/],h=["xiami","netease"],l={},e=null;if(typeof j==="undefined"||j==""){b.focus()}var c=(j.indexOf("163.com")>-1&&d>1)?e=1:e=0,k=j.match(g[e]);if(e==0&&!k&&!jQuery.isNumeric(j)){alert("您的当前站点只支持虾米音乐网址");return false}if(jQuery.isArray(k)){l.type=k[1];l.id=k[2]}else{if(!jQuery.isNumeric(j)){alert("获取音乐ID失败！")}}if(jQuery.isArray(k)&&l.type&&l.id){if(l.type=="playlist"){l.type="collect"}b.val(l.id);i.children("option").prop("selected",false);f.children("option").prop("selected",false);i.find("option[value="+h[e]+"]").prop("selected",true);f.find("option[value="+l.type+"]").prop("selected",true)}})});
